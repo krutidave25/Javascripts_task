@@ -1,0 +1,23 @@
+
+  <html>
+    <head>
+        <script type="text/javascript">
+            function get2(url, callback) {
+            var request = new XMLHttpRequest();
+            request.onerror = function () {
+            callback(new Error(request.statusText)));
+            };
+            request.onload = function () {
+            if (statusCode !== 200) {
+            callback(new Error(request.statusText));
+            return;
+        }
+    callback(null, request.responseText);
+  };
+  request.open(“GET”, url, true);
+  request.send();
+}
+        </script>
+    </head>
+    <body></body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function Animal(name,energy){
+                let animal = Object.create(Animal.prototype)
+                animal.name = name;
+                animal.energy= energy
+                return animal
+            }
+            function AnimalNew(name,energy){
+                //let animal = Object.create(Animal.prototype)
+                this.name = name;
+                this.energy= energy
+                //return animal
+            }
+            Animal.prototype.eat = function(quan){
+                console.log(`${this.name} is eating`)
+                this.energy += quan
+            }
+            Animal.prototype.sleep = function(time){
+                console.log(`${this.name} is sleeping`)
+                this.energy += time
+            }
+            Animal.prototype.play = function(time){
+                console.log(`${this.name} is playing`)
+                this.energy -= time
+            }
+            const leo = Animal('Leo',10);
+            leo.play(5);
+            console.log(leo);
+            const shona = Animal('Shona',09);
+            shona.eat();
+            console.log(shona);
+            const lio = new Animal('lio',3)
+            lio.play();
+            const shoni = new Animal('shoni',3)
+            shoni.eat();
+            console.log(Object.prototype);
+
+            const Arrow = ()=>{
+                console.log("ARROW FUNCTION");
+            }
+            const check = new Arrow();//CANNOT CREATE INSTANCE GENERATES ERROR
+            console.log(Arrow.prototype);//UNDEFINED
+        </script>
+    </head>
+    <body></body>
+</html>

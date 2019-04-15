@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script type="text/javascript">
+           function issue(callback)
+           {
+               callback();
+           }
+           function getThis()
+           {
+               console.log(this);//returns window object as it is the global scope.One can preserve this by using call or apply.
+           }
+           issue(getThis);
+        </script>
+    </head>
+    <body></body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script type="text/javascript">
+             var clientData = {
+                        id: 094545,
+                        fullName: "Not Set",
+                        setUserName: function (firstName, lastName)  {
+                        this.fullName = firstName + " " + lastName;
+                }
+}
+            //BIND METHOD
+           function issue(callback)
+           {
+               callback();
+           }
+           function getThis()
+           {
+               console.log(this);//returns window object as it is the global scope.One can preserve this by using call or apply.
+           }
+           let bindThis = getThis.bind({saying:'Bind Allowed'});
+           bindThis();
+           getThis();
+          //APPLY METHOD
+
+           function getUserInput(firstName, lastName, callback, callbackObj)  {
+            callback.apply (callbackObj, [firstName, lastName]);
+            }
+            getUserInput ("Barack", "Obama", clientData.setUserName, clientData);
+            console.log (clientData.fullName);
+        </script>
+    </head>
+    <body></body>
+</html>

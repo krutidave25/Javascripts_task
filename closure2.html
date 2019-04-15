@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        //clickcount variable can be used as a function 
+        var clickcount = (function()//makes it a self invoking function,outer function executes once.
+        {
+            var count = 0;
+            return function()//everytime button is clicked inner function increments the count 
+            {
+                return ++count;
+            }
+        })();
+        </script>
+    </head>
+    <body>
+        <input type = "button" value="CLICK" onclick="alert(clickcount())" />
+    </body>
+</html>

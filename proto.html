@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            let color = { type:'red'};
+            var obj2 = {};
+            console.log(obj2);
+            var obj3 = new Object();
+            console.log(obj3);
+
+            let mcolor = { view:'blue'};
+            Object.setPrototypeOf(mcolor,color);
+            console.log(mcolor.view);
+            console.log(mcolor.type);
+            console.log(mcolor.__proto__);
+            function check(){}
+            console.log(check.prototype);//returns object as protype acts just on functions
+            let obj = {};
+            console.log(obj.view);//returns undefined
+            console.log(obj.__proto__);//returns an object
+            console.log(obj.__proto__ === Object.prototype);
+        </script>
+    </head>
+    <body></body>
+</html>

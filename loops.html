@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        //for in
+        const obj = {
+	            a: 1,
+	            b: 2,
+	            c: 3,
+	            d: 4
+                }
+
+        for (const key in obj) {
+	        console.log( obj[key] )
+        }
+        //for of
+        var array = ['a', 'b', 'c', 'd'];
+            for (const item of array) {
+	        console.log(item)
+        }
+        //for each
+        var arr = ['red','yellow','green'];
+        for (var i = 0; i < arr.length; i++) {
+        console.log('Element', i, 'is', arr[i]);
+        }
+        arr.forEach(function(element, i) {
+        console.log('Element', i, 'is', element);
+        });
+        </script>
+    </head>
+    <body></body>
+</html>

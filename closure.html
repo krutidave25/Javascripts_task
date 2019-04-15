@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function addNum(fno,sno)
+            {
+                var returnVal = "SUM IS=";
+            function add()
+            {
+                return returnVal + (fno+sno);
+            }
+            return add//as have removed the brackets returns the function expression without execution. 
+            }
+            var result = addNum(10,20)();//This thing executes the inner function expression;
+            console.log(result);
+        </script>
+    </head>
+    <body></body>
+</html>
